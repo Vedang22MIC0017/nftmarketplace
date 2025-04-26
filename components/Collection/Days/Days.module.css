@@ -1,0 +1,88 @@
+.days_container {
+  padding: 4rem 2rem;
+  background: linear-gradient(45deg, rgba(var(--icons-color-rgb), 0.02), rgba(var(--icons-color-rgb), 0.05));
+}
+
+.days_title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, var(--icons-color), var(--main-bg-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.days_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.days_card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(var(--icons-color-rgb), 0.1);
+}
+
+.days_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(var(--icons-color-rgb), 0.1);
+}
+
+.days_number {
+  font-size: 3.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--icons-color), var(--main-bg-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.days_label {
+  color: var(--icons-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.days_description {
+  color: rgba(var(--icons-color-rgb), 0.7);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .days_container {
+    padding: 2rem 1rem;
+  }
+
+  .days_title {
+    font-size: 2rem;
+  }
+
+  .days_number {
+    font-size: 3rem;
+  }
+
+  .days_label {
+    font-size: 1rem;
+  }
+}

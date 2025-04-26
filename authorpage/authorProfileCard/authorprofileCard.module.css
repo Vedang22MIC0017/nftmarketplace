@@ -1,0 +1,116 @@
+.authorCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease-in;
+}
+
+.authorCard:hover {
+    box-shadow: var(--box-shadow-2);
+    transform: scale(1.01);
+}
+
+.authorCard_box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: -4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.authorCard_box_img {
+    grid-column: 1/-1;
+}
+
+.authorCard_box_img_img {
+    border-radius: 1rem;
+}
+
+.authorCard_box_profile {
+    grid-column: 1/-1;
+    text-align: center;
+    margin-top: -5rem;
+    position: relative;
+}
+
+.authorCard_box_profile_img {
+    border-radius: 50%;
+    border: 4px solid var(--main-bg-color);
+}
+
+.authorCard_box_info {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.authorCard_box_info h2 {
+    font-size: 2.5rem;
+    line-height: 0;
+}
+
+.authorCard_box_info_address {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 2rem;
+    border-radius: 5rem;
+    color: var(--icons-color);
+    font-size: 1rem;
+}
+
+.authorCard_box_info_social {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.authorCard_box_info_social a {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 0.5rem;
+    color: var(--icons-color);
+    transition: all 0.3s ease-in;
+}
+
+.authorCard_box_info_social a:hover {
+    background: var(--icons-color);
+    color: var(--main-bg-color);
+    transform: translateY(-5px);
+}
+
+.authorCard_box_stats {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+}
+
+.authorCard_box_stats_box h4 {
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.authorCard_box_stats_box p {
+    color: var(--icons-color);
+}
+
+@media screen and (max-width: 35em) {
+    .authorCard_box_info h2 {
+        font-size: 2rem;
+    }
+
+    .authorCard_box_stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

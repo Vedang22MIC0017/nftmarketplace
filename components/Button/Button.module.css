@@ -1,0 +1,32 @@
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button {
+  background-color: var(--icons-color);
+  padding: 1rem 2rem;
+  border: 1px solid var(--icons-color);
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  color: var(--shadow-light-color);
+  cursor: pointer;
+  transition: all .2s ease-in;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button:hover{
+  background-color: transparent;
+  color: var(--icons-color);
+  box-shadow: var(--box-shadow-2);
+}
+
+.button:active{
+  transform: scale(.95);
+}

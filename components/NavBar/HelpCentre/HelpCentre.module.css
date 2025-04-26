@@ -1,0 +1,61 @@
+.helpCentre_box {
+    position: absolute;
+    padding: 2rem 0.5rem;
+    box-shadow: var(--box-shadow);
+    font-size: 1rem;
+    width: 20rem;
+    border-radius: 1rem;
+    background-color: var(--main-bg-color);
+    z-index: 2222222;
+    border: 1px solid rgba(var(--icons-color-rgb), 0.15);
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: menuFadeIn 0.3s ease forwards;
+}
+
+@keyframes menuFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.helpCentre_box_footer {
+    position: relative;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.helpCentre {
+    padding: 0.75rem 1rem;
+    transition: all .3s ease;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--icons-color);
+    position: relative;
+}
+
+.helpCentre:hover {
+    background-color: var(--icons-color);
+    color: var(--shadow-light-color);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.helpCentre a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.helpCentre:active {
+    transform: translateY(0);
+    box-shadow: none;
+}

@@ -1,0 +1,151 @@
+.service {
+  width: 100%;
+  padding: 5rem 0;
+  background: var(--main-bg-color);
+}
+
+.service_container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.service_title_container {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.service_title {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--icons-color) 30%, #a259ff 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.service_description {
+  font-size: 1.2rem;
+  color: var(--icons-color);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.service_cards_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.service_card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service_card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(var(--icons-color-rgb), 0.2);
+}
+
+.service_card_image_container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service_card_image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.service_card_step {
+  background: linear-gradient(to right, var(--icons-color), #a259ff);
+  color: var(--shadow-light-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.service_card_title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--icons-color);
+  margin-bottom: 1rem;
+}
+
+.service_card_description {
+  font-size: 0.95rem;
+  color: var(--icons-color);
+  line-height: 1.5;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1280px) {
+  .service_container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .service_cards_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service_title {
+    font-size: 2.5rem;
+  }
+  
+  .service_description {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .service_cards_container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .service_title {
+    font-size: 2rem;
+  }
+  
+  .service_card {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .service_container {
+    width: 95%;
+  }
+  
+  .service_title {
+    font-size: 1.8rem;
+  }
+  
+  .service_card {
+    padding: 1.5rem 1rem;
+  }
+}

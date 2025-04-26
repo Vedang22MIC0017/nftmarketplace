@@ -1,0 +1,192 @@
+.about {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, rgba(var(--icons-color-rgb), 0.02), rgba(var(--icons-color-rgb), 0.05));
+  padding: 2rem;
+}
+
+.about_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+}
+
+.about_content {
+  margin-top: 3rem;
+}
+
+.about_mission {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.about_mission:hover {
+  transform: translateY(-5px);
+}
+
+.about_mission h2,
+.about_vision h2,
+.about_team h2,
+.about_achievements h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--icons-color) 30%, #a259ff 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about_vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.vision_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vision_image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: url('../img/hero.png') no-repeat center;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.vision_image .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.vision_image:hover .image {
+  transform: scale(1.05);
+}
+
+.team_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team_member {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team_member:hover {
+  transform: translateY(-5px);
+}
+
+.member_image {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, var(--icons-color) 30%, #a259ff 70%) border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member_image .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.member_image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px -4px rgba(147, 51, 234, 0.2);
+}
+
+.member_image:hover .image {
+  transform: scale(1.1);
+}
+
+.team_member h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.team_member span {
+  color: #9333EA;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.achievements_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.achievement_card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.achievement_card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement_card h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, var(--icons-color) 30%, #a259ff 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .about_vision {
+    grid-template-columns: 1fr;
+  }
+
+  .vision_image {
+    order: -1;
+  }
+
+  .team_grid,
+  .achievements_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about_container {
+    padding: 1rem;
+  }
+}

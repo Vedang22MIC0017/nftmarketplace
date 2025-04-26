@@ -1,0 +1,87 @@
+.AuthorTabs {
+    width: 100%;
+    margin-block: 2rem;
+}
+
+.AuthorTabs_box {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.AuthorTabs_box_tabs {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.AuthorTabs_box_tabs_btn {
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--icons-color);
+    cursor: pointer;
+    font-weight: 900;
+    transition: all 0.3s ease-in;
+}
+
+.AuthorTabs_box_tabs_btn.active {
+    background: var(--icons-color);
+    color: var(--main-bg-color);
+}
+
+.AuthorTabs_box_tabs_btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.AuthorTabs_box_tabs_btn.active:hover {
+    background: var(--icons-color);
+}
+
+.AuthorTabs_box_content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    padding: 2rem 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 64em) {
+    .AuthorTabs_box_content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .AuthorTabs_box_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 35em) {
+    .AuthorTabs_box {
+        width: 95%;
+    }
+
+    .AuthorTabs_box_tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .AuthorTabs_box_content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 1rem 0;
+    }
+}

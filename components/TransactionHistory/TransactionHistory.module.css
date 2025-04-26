@@ -1,0 +1,124 @@
+.transactionHistory {
+    padding: 2rem;
+    background-color: var(--main-bg-color);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.transactionList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.transactionCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(var(--icons-color-rgb), 0.1);
+    transition: all 0.3s ease;
+}
+
+.transactionCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: rgba(var(--icons-color-rgb), 0.3);
+}
+
+.transactionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(var(--icons-color-rgb), 0.1);
+}
+
+.transactionType {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--icons-color);
+    background: rgba(var(--icons-color-rgb), 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+}
+
+.timestamp {
+    font-size: 0.875rem;
+    color: rgba(var(--icons-color-rgb), 0.7);
+}
+
+.transactionDetails {
+    display: grid;
+    gap: 1rem;
+}
+
+.addressInfo, .locationInfo, .priceInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.address {
+    font-family: monospace;
+    font-size: 0.875rem;
+    color: var(--icons-color);
+    background: rgba(var(--icons-color-rgb), 0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    word-break: break-all;
+}
+
+.price {
+    font-weight: 600;
+    color: var(--icons-color);
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(var(--icons-color-rgb), 0.1);
+    border-top-color: var(--icons-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+    padding: 1rem;
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    color: #ff0000;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .transactionHistory {
+        padding: 1rem;
+    }
+
+    .transactionCard {
+        padding: 1rem;
+    }
+
+    .address {
+        font-size: 0.75rem;
+    }
+}

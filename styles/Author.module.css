@@ -1,0 +1,14 @@
+.author {
+    width: 100%;
+    position: relative;
+}
+
+.author > div {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 35em) {
+    .author {
+        padding-block: 3rem;
+    }
+}
